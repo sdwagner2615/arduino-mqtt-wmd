@@ -57,10 +57,12 @@ versions of the models to generate test data for any future training runs.
 For the sprayer I started by removing the stock micro-controller board and ended up disconnecting the PIR sensor entirely. Initially, I
 wanted to pass the PIR data into MQTT as additional sensor data but since the stock micro-controller board had all the relevant circuitry to
 boost the PIR signal embedded in it, and since I didn't _really_ need it, I just disconnected it.
+
 <img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-orig.jpg?raw=true" width="200" />
 
 As a replacement, I chose an ESP-10 ESP8266 controller board running custom firmware that would connect to my MQTT server and simply listen
 for a a command to fire the sprayer.
+
 <img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-esp10.jpg?raw=true" width="200" />
 
 Wiring was pretty straight forward, however I did have to add a buck converter connected directly to the usb plug to power the esp-10
