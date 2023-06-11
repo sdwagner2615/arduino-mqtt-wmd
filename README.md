@@ -6,7 +6,7 @@ Meet Madisyn, a 3 year old domestic short-hair/russian blue mix with an abundanc
 <img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/madisyn.jpg?raw=true" width="200" />
 
 Now meet, Mr. Darcy; an 18 year old domestic short hair who enjoys long naps in the sun and begging for food.
-![Mr. Darcy](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/darcy.jpg?raw=true | width=100)
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/darcy.jpg?raw=true" width="200" />
 
 Madisyn desperately wants to play with Darcy, but he wants nothing to do with her. He'll regularly hiss and swap her away,
 but does that stop Ms. Madisyn? Absolutely not! She will be his friend no matter what! Recently she's gotten into a habit of
@@ -40,7 +40,7 @@ each cat, not just tell me "there's a cat". I started by having Blue Iris (my NV
 detected. I let this run for 4 days and was able to collect over 500 pictures of Darcy, but only 100 pictures of Madisyn. Ideally I
 would have liked more pictures of Madisyn to train on, but I decided to [train](https://www.codeproject.com/Articles/5347827/How-to-Train-a-Custom-YOLOv5-Model-to-Detect-Objec)
 on ~100 images of each cat as a first attempt and I am happy to say I was pleasantly surprised by results:
-![Version 1](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/detect.png?raw=true).
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/detect.png?raw=true" />
 
 ### Version 2
 After running version 1 for a few days, I collected around 500 additional pictures of each cat and re-trained the model on around ~848
@@ -57,11 +57,11 @@ versions of the models to generate test data for any future training runs.
 For the sprayer I started by removing the stock micro-controller board and ended up disconnecting the PIR sensor entirely. Initially, I
 wanted to pass the PIR data into MQTT as additional sensor data but since the stock micro-controller board had all the relevant circuitry to
 boost the PIR signal embedded in it, and since I didn't _really_ need it, I just disconnected it.
-![The original board](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-orig.jpg?raw=true | width=100)
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-orig.jpg?raw=true" width="200" />
 
 As a replacement, I chose an ESP-10 ESP8266 controller board running custom firmware that would connect to my MQTT server and simply listen
 for a a command to fire the sprayer.
-![The new board](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-esp10.jpg?raw=true | width=100)
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-esp10.jpg?raw=true" width="200" />
 
 Wiring was pretty straight forward, however I did have to add a buck converter connected directly to the usb plug to power the esp-10
 instead of using the sprayer's native 5v -> 3.3v converter. Apparently it did not put off enough amps to power the esp-10 reliably.
@@ -71,6 +71,6 @@ I could not be more pleased with the results. After the first encounter with the
 almost a week. When she did, she was again correctly identified by the model and sprayed again. I have also had no false positives,
 and Darcy doesn't even know this device exists.
 
-![result](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/result.gif?raw=true)
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/result.gif?raw=true"/>
 
-![result2](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/result2.gif?raw=true)
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/result2.gif?raw=true"/>
