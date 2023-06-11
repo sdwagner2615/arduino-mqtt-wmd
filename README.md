@@ -3,10 +3,10 @@ A project designed to stop Madisyn from going into the Laundry Room.
 
 ## Introduction
 Meet Madisyn, a 3 year old domestic short-hair/russian blue mix with an abundance of energy.
-![Ms. Madisyn](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/madisyn.jpg?raw=true)
+![Ms. Madisyn](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/madisyn.jpg?raw=true | width=100)
 
 Now meet, Mr. Darcy; an 18 year old domestic short hair who enjoys long naps in the sun and begging for food.
-![Mr. Darcy](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/darcy.jpg?raw=true)
+![Mr. Darcy](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/darcy.jpg?raw=true | width=100)
 
 Madisyn desperately wants to play with Darcy, but he wants nothing to do with her. He'll regularly hiss and swap her away,
 but does that stop Ms. Madisyn? Absolutely not! She will be his friend no matter what! Recently she's gotten into a habit of
@@ -57,11 +57,11 @@ versions of the models to generate test data for any future training runs.
 For the sprayer I started by removing the stock micro-controller board and ended up disconnecting the PIR sensor entirely. Initially, I
 wanted to pass the PIR data into MQTT as additional sensor data but since the stock micro-controller board had all the relevant circuitry to
 boost the PIR signal embedded in it, and since I didn't _really_ need it, I just disconnected it.
-![The original board](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-orig.jpg?raw=true)
+![The original board](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-orig.jpg?raw=true | width=100)
 
 As a replacement, I chose an ESP-10 ESP8266 controller board running custom firmware that would connect to my MQTT server and simply listen
 for a a command to fire the sprayer.
-![The new board](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-esp10.jpg?raw=true)
+![The new board](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/sprayer-esp10.jpg?raw=true | width=100)
 
 Wiring was pretty straight forward, however I did have to add a buck converter connected directly to the usb plug to power the esp-10
 instead of using the sprayer's native 5v -> 3.3v converter. Apparently it did not put off enough amps to power the esp-10 reliably.
