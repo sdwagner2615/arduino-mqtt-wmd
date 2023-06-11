@@ -3,7 +3,7 @@ A project designed to stop Madisyn from going into the Laundry Room.
 
 ## Introduction
 Meet Madisyn, a 3 year old domestic short-hair/russian blue mix with an abundance of energy.
-![Ms. Madisyn](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/madisyn.jpg?raw=true | width=100)
+<img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/madisyn.jpg?raw=true" width="200" />
 
 Now meet, Mr. Darcy; an 18 year old domestic short hair who enjoys long naps in the sun and begging for food.
 ![Mr. Darcy](https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/darcy.jpg?raw=true | width=100)
