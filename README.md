@@ -46,12 +46,46 @@ on ~100 images of each cat as a first attempt and I am happy to say I was pleasa
 After running version 1 for a few days, I collected around 500 additional pictures of each cat and re-trained the model on around ~848
 pictures total. I also increased the epochs to 300 as opposed to the 50 laid out in the earlier steps of that linked tutorial. The results
 was a much more accurate model which now was able to correctly identifies each cat with 95-97% accuracy. 
+> Looking back after training 5 additional versions of this model I'm realizing that this model is probably the perfect version to solve
+> _this_ problem. I believe this model is over-fit to the Laundry Room camera's perspective and lighting but that also makes it the most
+> effective version to solve this problem. I plan to fallback to this version for that camera if version 7 proves to be inefficient.
 
 ### Version 3
 I added another ~1000 pictures (500 of each) from a different camera; just to see if I could detect when my cats were in a different
 part of the house. The model seems to be equally as accurate when running in my laundry room, and much more accurate when detecting
 the cats on this additional camera. Next I'm going to look into continuous training, taking pictures from these cameras and using previous
 versions of the models to generate test data for any future training runs.
+> After running this for a few days I discovered that starting with version 3 the model started to confuse background objects for Madisyn.
+> Oddly enough, this seems to only be a problem with her and my assumption is given that she's a dark colored cat that any dark colored
+> object or shadow was confusing enough for the model to just tag it as Madisyn.
+
+### Version 4 and 5
+I had CodeProject.AI feed predictions into a local instance of LabelStudio using some manually edited code. Version 4 and 5 of the models
+were retrained using version 3 and 4 respectively as the base weights and on only these auto-annotated images as training data. However,
+these versions while becoming more accurate on other cameras have started to become less accurate on the laundry room camera. I'm going
+to combine all images from all model training runs (going all the way back to the original 100 images uses for version 1) and try training
+a new version on this dataset to see if I get the improvement on other cameras without sacrificing the core use-case in the laundry room.
+> These versions also still confused background images (dark objects and spaces) for Madisyn on occasion.
+
+### Version 6-1/6-2
+For version 6 I combined all images I have so far into one massive training set totaling around 6k images and used it to train two variants
+of the model. Version 6-1, was trained using yolov5s as the base weight, while version 6-2 was trained using version 5 of the model
+as the base. Version 6-1 trained on 300 epochs, while version 6-2 finished after 265 epochs with a message stating "no improvement" had been
+seen for the last 100 epochs. When I did some spot checks on these two models I actually found 6-1 to be more accurate and rolled that out to
+all my cameras (including the laundry room). This was the first version of the model since version 2 I felt comfortable enough in the laundry
+room as it didn't perform dramatically worse than version 2 (but it did have lower confidence scores than version 2).
+> In this version the confusion matrix showed a significant improvement in the models ability to differentiate background images from Madisyn
+> but annoyingly version 6 started confusing background images for Darcy too (albeit not as much as Madisyn though: 0.45 vs 0.55).
+
+### Version 7
+After I rolled version 6-1 out, I let label studio collect another 3-4k images before re-training. At this point I had almost 10k images total
+and decided that this would be the final version of the model. I achieved the task I set out to do, and at this point all 3 of the cameras
+running these models were doing a good-enough job at differentiating the cats. With this last training, I was hoping to keep the model from
+confusing background images for Madisyn but the training results still showed that to be a problem. Confusing background images for Darcy
+improved (down to 0.22) but Madisyn's increased when compared to version 6 (0.78). I have rolled this model out to all cameras, and plan to
+review the predictions coming in to label studio over the coming days. The plan is to revert the Laundry Room back to version 2 if I see any
+issues but leave version 7 on all other cameras for the forseeable future.
+
 
 ## The Sprayer
 For the sprayer I started by removing the stock micro-controller board and ended up disconnecting the PIR sensor entirely. Initially, I
