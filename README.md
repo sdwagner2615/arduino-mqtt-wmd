@@ -3,9 +3,11 @@ A project containing AI-powered solutions aimed at stopping Madisyn from disturb
 
 ## Introduction
 Meet Madisyn, a 3 year old domestic short-hair/russian blue mix with an abundance of energy.
+
 <img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/madisyn.jpg?raw=true" width="600" />
 
 Now meet, Mr. Darcy; an 18 year old domestic short hair who enjoys long naps (alone) in the sun and begging for food.
+
 <img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/darcy.jpg?raw=true" width="600" />
 
 Madisyn desperately wants to be friends with Darcy, but he wants nothing to do with her. He'll regularly hiss and swap
@@ -27,6 +29,7 @@ for 4 days. Over that time I was able to collect over 500 pictures of Darcy, but
 I would have liked more pictures of Madisyn to train on, but I decided to move forward with
 [training](https://www.codeproject.com/Articles/5347827/How-to-Train-a-Custom-YOLOv5-Model-to-Detect-Objec) on just
 ~100 images of each cat as a first attempt. I am happy to say I was pleasantly surprised by results:
+
 <img src="https://github.com/sdwagner2615/arduino-mqtt-wmd/blob/main/images/detect.png?raw=true" width="600" />
 
 ### Version 2
