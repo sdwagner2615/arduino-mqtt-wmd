@@ -1,3 +1,10 @@
+>[!NOTE]
+> **9/1/2025: This repository is now archived.**
+>  
+> In January 2024, Darcy passed away and all the devices in this repository were retired.
+>
+> More recently I started to experiment with ESPHome and had to bring the food flapper back into active service to help my new cat lose weight. The plan is to migrate the firmware over to ESPHome and store it [here](https://github.com/sdwagner2615/esphome-configurations).
+
 # Weapons of Mad's Destruction
 A project containing AI-powered solutions aimed at stopping Madisyn from disturbing Darcy's way of life.
 
